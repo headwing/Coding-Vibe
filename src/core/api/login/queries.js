@@ -30,6 +30,7 @@ export const postSignup = async (post) => {
 };
 
 export const deleteUser = async (password) => {
+  console.log(password);
   const data = await instance.delete("/api/deleteUser", password);
   alert(data.response.data.errorMessage);
   console.log("회원 탈퇴 성공!");
